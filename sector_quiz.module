@@ -1,0 +1,62 @@
+<?php
+
+use Drupal\views\ViewExecutable;
+
+function sector_quiz_views_pre_render(ViewExecutable $view) {
+  $validResults = [];
+  if ($view->id() == 'sector_quiz') {
+    $view->element['#attached']['library'][] = 'sector_quiz/quiz';
+    foreach ($view->result as $key => $result) {
+      if (isset($result->taxonomy_term_field_data_name) && isset($result->field_scenario_quiz_taxonomy_term_field_data_nid)) {
+        if (!in_array($result->taxonomy_term_field_data_name . " " . $result->field_scenario_quiz_taxonomy_term_field_data_nid, $validResults)) {
+          $validResults[] = $result->taxonomy_term_field_data_name . " " . $result->field_scenario_quiz_taxonomy_term_field_data_nid;
+        }
+        else {
+          unset($view->result[$key]);
+        }
+      }
+    }
+  }
+  $validResults = [];
+  if ($view->id() == 'sector_quiz_scenario') {
+    $view->element['#attached']['library'][] = 'sector_quiz/quiz';
+    foreach ($view->result as $key => $result) {
+      if (isset($result->nid) && isset($result->nid)) {
+        if (!in_array($result->nid, $validResults)) {
+          $validResults[] = $result->nid;
+        }
+        else {
+          unset($view->result[$key]);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function sector_quiz_theme() {
+  return [
+    'test_template' => [
+      'template' => 'test_template',
+      'variables' => [
+        'title' => NULL,
+        'answers' => NULL,
+      ],
+    ],
+    'sector_quiz_related_scenarios' => [
+      'template' => 'sector_quiz_related_scenarios',
+      'variables' => [
+        'scenarios' => NULL,
+        'activeId' => NULL,
+      ],
+    ],
+    'quiz_queue_pagination' => [
+      'variables' => [
+        'queues' => [],
+      ],
+    ],
+  ];
+}
+

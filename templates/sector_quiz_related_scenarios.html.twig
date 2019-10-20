@@ -1,0 +1,14 @@
+<ul class="menu nav">
+  {% for scenario in scenarios %}
+    {%
+      set attr = create_attribute()
+    %}
+    {%
+      set classes = [
+      "menu__link",
+      (activeId == scenario.id) ? "is-active" : '',
+      ]
+    %}
+      <li class="menu__item"><a {{ attr.addClass(classes) }} href="/">{{ scenario.title }}</a></li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,5 @@
+name: Sector Quiz
+type: module
+description: Provides quiz management functionality for Sector Distribution.
+core: 8.x
+package: Sector

@@ -1,0 +1,8 @@
+quiz:
+  version: "1.0.x"
+  js:
+    js/sector.quiz.js: {}
+  dependencies:
+    - core/jquery
+    - core/modernizr
+    - core/jquery.once
