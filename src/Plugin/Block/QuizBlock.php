@@ -116,11 +116,9 @@ class QuizBlock extends BlockBase implements ContainerFactoryPluginInterface, Fo
     }
 
     $fieldAnswers = $node->get('field_scenario_answers')->getValue();
-    dpm($node->get('field_scenario_answers')->getValue());
     $answers = [];
     foreach ($fieldAnswers as $fieldAnswer) {
       $paragraphEntity = Paragraph::load($fieldAnswer['target_id']);
-      //dpm($paragraphEntity);
       // Got to be a better way of doing this...
       if (
         !empty($paragraphEntity) &&
@@ -131,7 +129,6 @@ class QuizBlock extends BlockBase implements ContainerFactoryPluginInterface, Fo
         $paragraphEntity->hasField('field_scenario_answer_feedback') &&
         !empty($paragraphEntity->get('field_scenario_answer_feedback')->getValue())
       ) {
-        //dpm($paragraphEntity->get('field_scenario_answer')->value);
         $answers[] = [
           'answer' => $paragraphEntity->get('field_scenario_answer')->value,
           'feedback' => $paragraphEntity->get('field_scenario_answer_feedback')->value,
@@ -141,7 +138,6 @@ class QuizBlock extends BlockBase implements ContainerFactoryPluginInterface, Fo
       }
     }
 
-    //dpm([$node, $node->get('field_scenario_answers')->getValue(), $answers]);
 
     // Title.
     $form['calculator_title'] = [
@@ -178,12 +174,6 @@ class QuizBlock extends BlockBase implements ContainerFactoryPluginInterface, Fo
       '#type' => 'submit',
       '#value' => $this->t('Submit'),
     ];
-
-    //dpm([$form, $form_state]);
-    if (!empty($form_state->getValue('data-speed-icons'))) {
-      dpm('test');
-      die();
-    }
     return $form;
   }
 
@@ -203,7 +193,6 @@ class QuizBlock extends BlockBase implements ContainerFactoryPluginInterface, Fo
       '#title' => 'test-title',
     ];
 
-    //dpm($build);
     return $build;
   }
 

@@ -85,7 +85,6 @@ class RelatedScenariosBlock extends BlockBase implements ContainerFactoryPluginI
     foreach ($parentQuizValues as $key => $parentQuizValue) {
       $parentQuizIds[] = $parentQuizValue['target_id'];
     }
-    dpm($parentQuizIds);
     $relatedScenarios = $this->entityTypeManager->getStorage('node')->getQuery()->condition('type', 'quiz_scenario')->condition('field_scenario_quiz', $parentQuizIds, 'IN')->execute();
     $scenarios = [];
     foreach ($relatedScenarios as $relatedScenario) {
