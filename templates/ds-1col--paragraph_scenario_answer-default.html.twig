@@ -1,0 +1,127 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ *
+ * Overrides default theme implementation to display a paragraph.
+ *
+ * Allow for custom <input> elements of the type radio.
+ * Add logic based on scenario answer being correct or not.
+ */
+#}
+{%
+  set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished'
+]
+%}
+{% block paragraph %}
+  {% block content %}
+    {%
+      set correctAnswer = paragraph.get('field_scenario_answer_correct').getValue().0.value == 1
+    %}
+    {%
+      set answerAttrs = create_attribute()
+    %}
+    {%
+      set answerAttrClasses = [
+      "quiz__answer",
+      (correctAnswer) ? "is-correct" : "",
+    ]
+    %}
+    {# TODO (tg) - I want to strip all the markup from the fields (eg: content.field_scenario_answer, content.field_scenario_answer_feedback) so need raw maybe? #}
+    {% if content.field_scenario_answer %}
+      <li {{ answerAttrs.addClass(answerAttrClasses) }}>
+        {{ content.field_scenario_answer }}
+      </li>
+    {% endif %}
+    {#{% if content.field_scenario_answer_feedback %}
+      {%
+        set attr = create_attribute()
+      %}
+      {%
+        set classes = [
+        "has-icon",
+        (correctAnswer) ? "has-check" : "has-close",
+      ]
+      %}
+      <div {{ attr.addClass(classes) }}>
+        {{ content.field_scenario_answer_feedback }}
+      </div>#}
+    <div class="js-feedback-wrapper">{% if content.field_scenario_answer_feedback %}
+    {%
+      set answerAttr, feedbackAttr = create_attribute(), create_attribute()
+
+    %}
+    {%
+      set answerClasses, feedbackClasses =
+      [
+        "quiz__answer",
+        "quiz__result",
+        (correctAnswer) ? "is-correct" : "is-incorrect",
+        "js-scenario-result-wrapper",
+      ],
+      [
+        "has-icon",
+        (correctAnswer) ? "has-check" : "has-close",
+      ]
+    %}
+    <div {{ answerAttr.addClass(answerClasses) }}>{{ content.field_scenario_answer }}</div>
+    <div {{ feedbackAttr.addClass(feedbackClasses) }}>
+      {{ content.field_scenario_answer_feedback }}
+      <button class="btn btn-primary has-back-arrow js-quiz-back-button">Try a different response</button>
+    </div>
+    </div>
+  {% endif %}
+  {% endblock %}
+  {#<div class="js-feedback-wrapper">{% if content.field_scenario_answer_feedback %}
+    {%
+      set attr = create_attribute()
+    %}
+    {%
+      set classes = [
+      "has-icon",
+      (correctAnswer) ? "has-check" : "has-close",
+    ]
+    %}
+    <div {{ attr.addClass(classes) }}>
+      {{ content.field_scenario_answer_feedback }}
+    </div>
+  </div>#}
+{% endblock paragraph %}
