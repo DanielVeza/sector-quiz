@@ -1,0 +1,245 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.quiz_scenario.body
+    - field.field.node.quiz_scenario.field_banner
+    - field.field.node.quiz_scenario.field_metatag
+    - field.field.node.quiz_scenario.field_scenario_answers
+    - field.field.node.quiz_scenario.field_scenario_category
+    - field.field.node.quiz_scenario.field_scenario_question
+    - field.field.node.quiz_scenario.field_scenario_quiz
+    - field.field.node.quiz_scenario.field_scenario_transcript
+    - field.field.node.quiz_scenario.field_teaser
+    - node.type.quiz_scenario
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_delimiter
+    - field_formatter_filter
+    - field_group
+    - metatag
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_meta
+        - field_scenario_transcript
+        - body
+        - group_quiz
+        - group_transcript
+        - field_scenario_category
+        - field_metatag
+        - field_scenario_question
+        - field_scenario_answers
+  field_group:
+    group_transcript:
+      children:
+        - field_scenario_transcript
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        description: ''
+        id: ''
+        classes: 'transcript has-margin-top-double'
+        open: false
+      label: Transcript
+      region: hidden
+    group_meta:
+      children:
+        - field_scenario_category
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'meta call-to-action-left-line'
+      label: Meta
+      region: hidden
+    group_quiz:
+      children:
+        - field_scenario_question
+        - field_scenario_answers
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'quiz js-quiz-answers has-margin-top-double'
+      label: Quiz
+      region: hidden
+id: node.quiz_scenario.default
+targetEntityType: node
+bundle: quiz_scenario
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_filter:
+        format: full_html
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - prose
+            lb-col: false
+  field_metatag:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: ds_content
+  field_scenario_answers:
+    type: entity_reference_revisions_entity_view
+    weight: 8
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      field_delimiter:
+        delimiter: ''
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: ul
+            ow-cl: 'list-unstyled list--log-pile has-margin-top-base'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: ds_content
+  field_scenario_category:
+    weight: 4
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: true
+            classes: {  }
+    type: entity_reference_label
+    region: ds_content
+  field_scenario_question:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_filter:
+        format: full_html
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: text_default
+    region: ds_content
+  field_scenario_transcript:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_filter:
+        format: full_html
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            classes:
+              - prose
+            lb-col: false
+    type: text_default
+    region: ds_content
+hidden:
+  field_banner: true
+  field_scenario_quiz: true
+  field_teaser: true
+  links: true

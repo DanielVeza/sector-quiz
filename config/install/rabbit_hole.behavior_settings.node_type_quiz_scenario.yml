@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.quiz_scenario
+id: node_type_quiz_scenario
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

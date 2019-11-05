@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: sector_quiz_scenario
+label: 'Sector quiz scenario'
+type: 'canonical_entities:node'
+pattern: 'quizzes/[node:title]'
+selection_criteria:
+  00481e56-a22d-4be3-8980-3c441e94e494:
+    id: node_type
+    bundles:
+      quiz_scenario: quiz_scenario
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: -5
+relationships: {  }

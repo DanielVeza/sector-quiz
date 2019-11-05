@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_quiz_thank_you_page
+    - taxonomy.vocabulary.quiz
+id: taxonomy_term.quiz.field_quiz_thank_you_page
+field_name: field_quiz_thank_you_page
+entity_type: taxonomy_term
+bundle: quiz
+label: 'Thank you page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

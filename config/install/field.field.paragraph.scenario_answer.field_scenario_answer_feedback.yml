@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_scenario_answer_feedback
+    - paragraphs.paragraphs_type.scenario_answer
+  module:
+    - better_formats
+    - text
+third_party_settings:
+  better_formats:
+    allowed_formats_toggle: 1
+    allowed_formats:
+      teaser_display_text: teaser_display_text
+      basic_html: 0
+      restricted_basic_html: 0
+      full_html: 0
+      restricted_html: 0
+      raw_html: 0
+    default_order_toggle: 0
+    default_order_wrapper:
+      formats:
+        basic_html:
+          weight: '-10'
+        restricted_basic_html:
+          weight: '-9'
+        full_html:
+          weight: '-8'
+        restricted_html:
+          weight: '-7'
+        teaser_display_text:
+          weight: '-6'
+        raw_html:
+          weight: '0'
+id: paragraph.scenario_answer.field_scenario_answer_feedback
+field_name: field_scenario_answer_feedback
+entity_type: paragraph
+bundle: scenario_answer
+label: Feedback
+description: 'The feedback is shown once a choice is made. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

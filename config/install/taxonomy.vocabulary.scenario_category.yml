@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Scenario category'
+vid: scenario_category
+description: 'Used to sort quiz scenarios by category. <em>Terms are rabbit-holed to 403.<em> '
+hierarchy: 0
+weight: 0

@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_quiz
+  module:
+    - system
+    - views
+  theme:
+    - sector_starter
+id: views_block__sector_quiz_block_1
+theme: sector_starter
+region: sidebar
+weight: -15
+provider: null
+plugin: 'views_block:sector_quiz-block_1'
+settings:
+  id: 'views_block:sector_quiz-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/quizzes/*'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scenario_quiz
+    - node.type.quiz_scenario
+    - taxonomy.vocabulary.quiz
+id: node.quiz_scenario.field_scenario_quiz
+field_name: field_scenario_quiz
+entity_type: node
+bundle: quiz_scenario
+label: Quiz
+description: 'Select the quiz(zes) the scenario should be a part of. You can <a href=''/admin/structure/taxonomy/manage/quiz/overview'' target="_blank" >add or edit terms for this taxonomy</a> (requires specific permissions, link opens in a new window). Remember to add the scenario to the relevant <a href=''/admin/structure/entityqueue/quizzes/list'' target="_blank" > Quiz queue</a> (requires specific permissions, link opens in a new window)! '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      quiz: quiz
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

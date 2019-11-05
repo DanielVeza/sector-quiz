@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_scenario_answer_correct
+    - paragraphs.paragraphs_type.scenario_answer
+id: paragraph.scenario_answer.field_scenario_answer_correct
+field_name: field_scenario_answer_correct
+entity_type: paragraph
+bundle: scenario_answer
+label: 'Is this answer correct? '
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

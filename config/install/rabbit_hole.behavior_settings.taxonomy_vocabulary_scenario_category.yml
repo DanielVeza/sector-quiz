@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.scenario_category
+id: taxonomy_vocabulary_scenario_category
+action: access_denied
+allow_override: 1
+redirect: ''
+redirect_code: 301

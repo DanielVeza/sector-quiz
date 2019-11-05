@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.quiz.field_quiz_thank_you_page
+    - taxonomy.vocabulary.quiz
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - description
+        - field_quiz_thank_you_page
+id: taxonomy_term.quiz.default
+targetEntityType: taxonomy_term
+bundle: quiz
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+  field_quiz_thank_you_page:
+    type: entity_reference_entity_view
+    weight: 1
+    region: ds_content
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+hidden: {  }

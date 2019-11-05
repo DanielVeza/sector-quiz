@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Quiz
+vid: quiz
+description: 'Use Quiz to group Quiz scenarios into quizzes. <em>Note: Taxonomy pages are public and use views integration.</em>'
+hierarchy: 0
+weight: 0

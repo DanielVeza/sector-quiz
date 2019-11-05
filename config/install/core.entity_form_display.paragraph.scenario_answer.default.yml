@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.scenario_answer.field_scenario_answer
+    - field.field.paragraph.scenario_answer.field_scenario_answer_correct
+    - field.field.paragraph.scenario_answer.field_scenario_answer_feedback
+    - paragraphs.paragraphs_type.scenario_answer
+  module:
+    - text
+id: paragraph.scenario_answer.default
+targetEntityType: paragraph
+bundle: scenario_answer
+mode: default
+content:
+  field_scenario_answer:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_scenario_answer_correct:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_scenario_answer_feedback:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

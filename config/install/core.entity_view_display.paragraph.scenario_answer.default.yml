@@ -1,0 +1,73 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.scenario_answer.field_scenario_answer
+    - field.field.paragraph.scenario_answer.field_scenario_answer_correct
+    - field.field.paragraph.scenario_answer.field_scenario_answer_feedback
+    - paragraphs.paragraphs_type.scenario_answer
+  module:
+    - ds
+    - field_formatter_filter
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_scenario_answer
+        - field_scenario_answer_feedback
+id: paragraph.scenario_answer.default
+targetEntityType: paragraph
+bundle: scenario_answer
+mode: default
+content:
+  field_scenario_answer:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_filter:
+        format: full_html
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: text_default
+    region: ds_content
+  field_scenario_answer_feedback:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_filter:
+        format: full_html
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - quiz__feedback
+            lb-col: false
+    type: text_default
+    region: ds_content
+hidden:
+  field_scenario_answer_correct: true

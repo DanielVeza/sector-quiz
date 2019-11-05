@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.quiz_scenario
+id: node.quiz_scenario.title
+field_name: title
+entity_type: node
+bundle: quiz_scenario
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

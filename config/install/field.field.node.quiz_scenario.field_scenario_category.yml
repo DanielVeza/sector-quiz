@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scenario_category
+    - node.type.quiz_scenario
+    - taxonomy.vocabulary.scenario_category
+id: node.quiz_scenario.field_scenario_category
+field_name: field_scenario_category
+entity_type: node
+bundle: quiz_scenario
+label: 'Scenario category'
+description: '<a href=''/admin/structure/taxonomy/manage/scenario_category/overview'' target="_blank" >Add or edit terms for this taxonomy</a> (requires specific permissions, link opens in a new window). '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      scenario_category: scenario_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

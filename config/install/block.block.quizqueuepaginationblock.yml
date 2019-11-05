@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - node
+    - sector_quiz
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: has-margin-top-double
+id: quizqueuepaginationblock
+theme: sector_starter
+region: content
+weight: -7
+provider: null
+plugin: quiz_queue_pagination_block
+settings:
+  id: quiz_queue_pagination_block
+  label: 'Ready for more?'
+  provider: sector_quiz
+  label_display: visible
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      quiz_scenario: quiz_scenario
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

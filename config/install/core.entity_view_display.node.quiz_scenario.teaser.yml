@@ -1,0 +1,43 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.quiz_scenario.body
+    - field.field.node.quiz_scenario.field_banner
+    - field.field.node.quiz_scenario.field_metatag
+    - field.field.node.quiz_scenario.field_scenario_answers
+    - field.field.node.quiz_scenario.field_scenario_category
+    - field.field.node.quiz_scenario.field_scenario_quiz
+    - field.field.node.quiz_scenario.field_scenario_transcript
+    - field.field.node.quiz_scenario.field_teaser
+    - node.type.quiz_scenario
+  module:
+    - text
+    - user
+id: node.quiz_scenario.teaser
+targetEntityType: node
+bundle: quiz_scenario
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_banner: true
+  field_metatag: true
+  field_scenario_answers: true
+  field_scenario_category: true
+  field_scenario_quiz: true
+  field_scenario_transcript: true
+  field_teaser: true

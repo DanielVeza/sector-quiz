@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - node
+    - sector_quiz
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: 'navigation navigation--secondary'
+id: relatedscenariosblock
+theme: sector_starter
+region: sidebar
+weight: -16
+provider: null
+plugin: related_scenarios_block
+settings:
+  id: related_scenarios_block
+  label: 'In this quiz'
+  provider: sector_quiz
+  label_display: visible
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      quiz_scenario: quiz_scenario
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
