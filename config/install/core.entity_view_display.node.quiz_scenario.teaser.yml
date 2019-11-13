@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.quiz_scenario.field_metatag
     - field.field.node.quiz_scenario.field_scenario_answers
     - field.field.node.quiz_scenario.field_scenario_category
+    - field.field.node.quiz_scenario.field_scenario_question
     - field.field.node.quiz_scenario.field_scenario_quiz
     - field.field.node.quiz_scenario.field_scenario_transcript
     - field.field.node.quiz_scenario.field_teaser
@@ -38,6 +39,7 @@ hidden:
   field_metatag: true
   field_scenario_answers: true
   field_scenario_category: true
+  field_scenario_question: true
   field_scenario_quiz: true
   field_scenario_transcript: true
   field_teaser: true

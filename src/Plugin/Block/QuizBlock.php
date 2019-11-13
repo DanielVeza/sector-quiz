@@ -138,48 +138,12 @@ class QuizBlock extends BlockBase implements ContainerFactoryPluginInterface, Fo
       }
     }
 
-
-    // Title.
-    $form['calculator_title'] = [
-      '#markup' => '<h3 class="calculator__title">OIA Response Calculator</h3>',
-    ];
-    $form['data-speed-icons'] = [
-      '#title' => $this->t('Speed icons'),
-      '#type' => 'radios',
-      '#theme' => 'test_template',
-      '#answers' => $answers,
-      '#options' => [
-        'animals' => $this->t('Use animal icons (rabbit and turtle)'),
-        'arrows' => $this->t('Use up and down arrow icons'),
-      ],
-      '#ajax' => [
-        'callback' => '::instrumentDropdownCallback',
-        'wrapper' => 'edit-output',
-        'event' => 'change',
-      ],
-    ];
-    // Create a textbox that will be updated
-    // when the user selects an item from the select box above.
-    $form['container']['output'] = [
-      '#type' => 'textfield',
-      '#size' => '60',
-      '#disabled' => TRUE,
-      '#value' => 'Hello, Drupal!!1',
-      '#attributes' => [
-        'id' => ['edit-output'],
-      ],
-    ];
-    // Create the submit button.
-    $form['submit'] = [
-      '#type' => 'submit',
-      '#value' => $this->t('Submit'),
-    ];
     return $form;
   }
 
-  public function instrumentDropdownCallback(array $form, FormStateInterface $form_state) {
+/*  public function instrumentDropdownCallback(array $form, FormStateInterface $form_state) {
     return  ['#markup' => '<h1>Hello</h1>'];
-  }
+  }*/
 
 
 

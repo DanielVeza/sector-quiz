@@ -1,0 +1,92 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/scenario_answer"
+        }
+    },
+    "id": [
+        {
+        }
+    ],
+    "uuid": [
+        {
+            "value": "22bdfa5d-6517-418f-ae9e-4b7078ab4e35"
+        }
+    ],
+    "revision_id": [
+        {
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "scenario_answer"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-11-05T22:23:29+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "29"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_scenario_answers"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_scenario_answer": [
+        {
+            "value": "Sector Quiz is a lollipop.  ",
+            "format": "teaser_display_text",
+            "processed": "Sector Quiz is a lollipop."
+        }
+    ],
+    "field_scenario_answer_correct": [
+        {
+            "value": false
+        }
+    ],
+    "field_scenario_answer_feedback": [
+        {
+            "value": "Sorry, this is the wrong answer - but we like lollies too. ",
+            "format": "teaser_display_text",
+            "processed": "Sorry, this is the wrong answer - but we like lollies too."
+        }
+    ]
+}

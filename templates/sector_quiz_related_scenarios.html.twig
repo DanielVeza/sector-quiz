@@ -9,6 +9,6 @@
       (activeId == scenario.id) ? "is-active" : '',
       ]
     %}
-      <li class="menu__item"><a {{ attr.addClass(classes) }} href="/">{{ scenario.title }}</a></li>
+      <li class="menu__item"><a {{ attr.addClass(classes) }} href={{scenario.url}}>{{ scenario.title }}</a></li>
   {% endfor %}
 </ul>

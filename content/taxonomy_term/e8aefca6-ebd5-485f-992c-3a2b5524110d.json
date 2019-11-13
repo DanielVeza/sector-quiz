@@ -1,0 +1,79 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/taxonomy\/term\/30?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/scenario_category"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/scenario_category\/parent": [
+            null
+        ]
+    },
+    "tid": [
+        {
+        }
+    ],
+    "uuid": [
+        {
+            "value": "e8aefca6-ebd5-485f-992c-3a2b5524110d"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "scenario_category"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "name": [
+        {
+            "value": "Sample category (Quiz)",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/scenario_category\/parent": [
+            null
+        ]
+    },
+    "changed": [
+        {
+            "value": "2019-11-05T03:14:38+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| Sector",
+                "robots": "noindex",
+                "shortlink": "http:\/\/default\/node\/10",
+                "canonical_url": "http:\/\/default\/node\/10",
+                "og_url": "http:\/\/default\/node\/10"
+            }
+        }
+    ]
+}

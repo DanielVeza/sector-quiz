@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.quizzes
+    - field.storage.taxonomy_term.field_quiz_entity_subqueue
+    - taxonomy.vocabulary.quiz
+id: taxonomy_term.quiz.field_quiz_entity_subqueue
+field_name: field_quiz_entity_subqueue
+entity_type: taxonomy_term
+bundle: quiz
+label: 'Entity subqueue'
+description: 'Select the quiz subqueue or you can <a href=''/admin/structure/entityqueue/quizzes/list'' target="_blank" >add or edit a subqueue to the quiz queue</a> (requires specific permissions, link opens in a new window)!'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:entity_subqueue'
+  handler_settings:
+    target_bundles:
+      quizzes: quizzes
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

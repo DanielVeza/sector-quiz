@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.quiz.field_quiz_entity_subqueue
     - field.field.taxonomy_term.quiz.field_quiz_thank_you_page
     - taxonomy.vocabulary.quiz
   module:
@@ -20,6 +21,12 @@ content:
       placeholder: ''
       rows: 5
     third_party_settings: {  }
+  field_quiz_entity_subqueue:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_quiz_thank_you_page:
     weight: 2
     settings:

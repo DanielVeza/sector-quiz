@@ -7,6 +7,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\media\MediaInterface;
 use Drupal\node\Entity\Node;
+use Drupal\entityqueue\Entity\EntitySubqueue;
 use Drupal\node\NodeInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
@@ -76,29 +77,40 @@ class RelatedScenariosBlock extends BlockBase implements ContainerFactoryPluginI
    * {@inheritdoc}
    */
   public function build() {
+    $build = [];
+    // Get the current entity from the request.
     $node = $this->getEntityFromRoute('node');
     if (empty($node)) {
-      return [];
+      return $build;
     }
+    // Get the quiz id from the node.
     $parentQuizValues = $node->get('field_scenario_quiz')->getValue();
-    $parentQuizIds = [];
-    foreach ($parentQuizValues as $key => $parentQuizValue) {
-      $parentQuizIds[] = $parentQuizValue['target_id'];
-    }
-    $relatedScenarios = $this->entityTypeManager->getStorage('node')->getQuery()->condition('type', 'quiz_scenario')->condition('field_scenario_quiz', $parentQuizIds, 'IN')->execute();
-    $scenarios = [];
-    foreach ($relatedScenarios as $relatedScenario) {
-      $relatedScenarioNode = Node::load($relatedScenario);
-      $scenarios[] = [
-        'title' => $relatedScenarioNode->label(),
-        'id' => $relatedScenario,
+    $parentQuizId = array_shift($parentQuizValues)['target_id'];
+    if ($parentQuizId) {
+      // Get the matching quiz queue.
+      $term = $this->entityTypeManager->getStorage('taxonomy_term')->load($parentQuizId);
+      $queue = $term->get('field_quiz_entity_subqueue')->getValue();
+      $queueId = array_shift($queue)['target_id'];
+      $subqueue = EntitySubqueue::load($queueId);
+      // Get the queue items and load the attached scenarios.
+      $queueItems = $subqueue->get('items')->getValue();
+      $scenarios = [];
+      foreach ($queueItems as $queueItem) {
+        $queueItemNode = Node::load($queueItem['target_id']);
+        if ($queueItemNode->isPublished()) {
+          $scenarios[] = [
+            'title' => $queueItemNode->label(),
+            'id' => $queueItem,
+            'url' => $queueItemNode->toUrl()->toString(),
+          ];
+        }
+      }
+      $build = [
+        '#theme' => 'sector_quiz_related_scenarios',
+        '#scenarios' => $scenarios,
+        '#activeId' => $node->id(),
       ];
     }
-    $build = [
-      '#theme' => 'sector_quiz_related_scenarios',
-      '#scenarios' => $scenarios,
-      '#activeId' => $node->id(),
-    ];
     return $build;
   }
 
@@ -106,6 +118,8 @@ class RelatedScenariosBlock extends BlockBase implements ContainerFactoryPluginI
    * Helper function.
    *
    * Gets the current node from the route.
+   *
+   * This can be removed when it becomes a service in Sector.
    *
    * Needed to get the correct node when viewing a revision.
    * Credit for this code goes to Berdir: https://www.drupal.org/u/berdir

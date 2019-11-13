@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function sector_quiz_install() {
+  sector_quiz_setup_permissions();
+  sector_quiz_setup_xmlsitemap();
+
+}
+
+/**
+ * Helper function
+ *
+ * Set up the permissions for the portfolio content type.
+ */
+function sector_quiz_setup_permissions() {
+  $roles = [
+    'content_administrator',
+    'content_editor'
+  ];
+  foreach ($roles as $role) {
+    user_role_grant_permissions(
+      $role,
+      [
+        'create quiz_scenario content',
+        'delete any quiz_scenario content',
+        'delete own quiz_scenario content',
+        'edit any quiz_scenario content',
+        'edit own quiz_scenario content',
+        'revert quiz_scenario revisions',
+        'view quiz_scenario revisions',
+      ]
+    );
+  }
+}
+
+/**
+ * Helper function.
+ *
+ * Set up the sitemap settings on install.
+ */
+function sector_quiz_setup_xmlsitemap() {
+  // Check Xmlsitemap module is enabled.
+  if(\Drupal::service('module_handler')->moduleExists('xmlsitemap')) {
+    // Default data array for portfolios.
+    $data = [
+      'status' => TRUE,
+      'priority' => 0.5,
+      'changefreq' => 86400,
+    ];
+    // Load the config and save our default data.
+    \Drupal::configFactory()->getEditable("xmlsitemap.settings.node.quiz_scenario")->setData($data)->save();
+  }
+}
+

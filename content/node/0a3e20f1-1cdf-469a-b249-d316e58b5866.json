@@ -1,0 +1,315 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/quizzes\/what-sector-quiz-sample-scenario?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/quiz_scenario"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/quiz_scenario\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/3?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/quiz_scenario\/uid": [
+            {
+                "href": "http:\/\/default\/user\/3?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/quiz_scenario\/field_scenario_answers": [
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/quiz_scenario\/field_scenario_category": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/30?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/quiz_scenario\/field_scenario_quiz": [
+            {
+                "href": "http:\/\/default\/quizzes\/sector-quiz-quiz-sample-quiz?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/quiz_scenario\/field_teaser": [
+            {
+                "href": "http:\/\/default\/image\/sample-image-landscape-quiz?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "nid": [
+        {
+        }
+    ],
+    "uuid": [
+        {
+            "value": "0a3e20f1-1cdf-469a-b249-d316e58b5866"
+        }
+    ],
+    "vid": [
+        {
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "quiz_scenario"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2019-11-05T23:48:27+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/quiz_scenario\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6548935b-b1d4-46aa-b0ee-abdb66acb8da"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/quiz_scenario\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6548935b-b1d4-46aa-b0ee-abdb66acb8da"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/quiz_scenario\/field_scenario_answers": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/scenario_answer"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "0d649e30-489e-4c98-bea3-e600f10e6822"
+                    }
+                ],
+                "target_revision_id": "74"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/scenario_answer"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "22bdfa5d-6517-418f-ae9e-4b7078ab4e35"
+                    }
+                ],
+                "target_revision_id": "75"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/scenario_answer"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6842a0cf-8c75-4201-b769-fe46c2a9b4ad"
+                    }
+                ],
+                "target_revision_id": "76"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/quiz_scenario\/field_scenario_category": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/30?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/scenario_category"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e8aefca6-ebd5-485f-992c-3a2b5524110d"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/quiz_scenario\/field_scenario_quiz": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/quizzes\/sector-quiz-quiz-sample-quiz?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/quiz"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "d68c8167-c079-4239-8eb8-7e4b0a8c45c9"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/quiz_scenario\/field_teaser": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/image\/sample-image-landscape-quiz?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "0caed840-7f6b-42bf-8743-b19b07c5cf93"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "What is Sector Quiz? (sample scenario)",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-11-05T22:16:45+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-11-05T23:48:27+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "What is Sector Quiz? (sample scenario) | Sector",
+                "shortlink": "http:\/\/default\/node\/10",
+                "canonical_url": "http:\/\/default\/node\/10",
+                "description": "Sector Quiz is an optional Sector add-on. Sector Quiz components and configuration make it easy to get started, and the sample content makes it easy to grasp the main features.\u00a0\n\n\nThis sample page is part of the Sector Quiz add-on. It is a node of\u00a0the content type 'quiz scenario'.\u00a0Learn more about Sector and the Sector Quiz add-on at Sector.nz.\u00a0",
+                "og_url": "http:\/\/default\/node\/10",
+                "og_title": "What is Sector Quiz? (sample scenario)",
+                "og_description": "Sector Quiz is an optional Sector add-on. Sector Quiz components and configuration make it easy to get started, and the sample content makes it easy to grasp the main features.\u00a0\n\n\nThis sample page is part of the Sector Quiz add-on. It is a node of\u00a0the content type 'quiz scenario'.\u00a0Learn more about Sector and the Sector Quiz add-on at Sector.nz.\u00a0",
+                "og_image_type": "image\/jpeg"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/quizzes\/what-sector-quiz-sample-scenario",
+            "pid": 38,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ],
+    "body": [
+        {
+            "value": "<p class=\"lead\">Sector Quiz is an optional Sector add-on. Sector Quiz components and configuration make it easy to get started, and the sample content makes it easy to grasp the main features.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\r\n<p>This sample page is part of the Sector Quiz add-on. It is a node of&nbsp;the content type 'quiz scenario'.&nbsp;Learn more about Sector and the <a href=\"https:\/\/www.sector.nz\/documentation\/coming-soon\">Sector Quiz add-on<\/a> at <a href=\"https:\/\/www.sector.nz\/\">Sector.nz<\/a>.&nbsp;<\/p>\r\n<\/div>\r\n\r\n<p>This <a href=\"https:\/\/www.sector.nz\/documentation\/sector-add-ons-overview\">Sector add-on<\/a> can be downloaded and installed via the <a href=\"https:\/\/www.drupal.org\/project\/sector_Index\">Sector Quiz project on Drupal.org<\/a> or by using composer.<\/p>\r\n\r\n<p>In Sector Quiz, content comes first. Each quiz can be built from a set of scenarios, with quiz queues allowing you&nbsp;to easily add and reshuffle scenarios in&nbsp;a quiz. Each scenario takes advantage of the full suite of Sector content tools - such as&nbsp;formatted text and media,&nbsp;including banner videos or images.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p class=\"lead\">Sector Quiz is an optional Sector add-on. Sector Quiz components and configuration make it easy to get started, and the sample content makes it easy to grasp the main features.\u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>This sample page is part of the Sector Quiz add-on. It is a node of\u00a0the content type 'quiz scenario'.\u00a0Learn more about Sector and the <a href=\"https:\/\/www.sector.nz\/documentation\/coming-soon\">Sector Quiz add-on<\/a> at <a href=\"https:\/\/www.sector.nz\/\">Sector.nz<\/a>.\u00a0<\/p>\n<\/div>\n\n<p>This <a href=\"https:\/\/www.sector.nz\/documentation\/sector-add-ons-overview\">Sector add-on<\/a> can be downloaded and installed via the <a href=\"https:\/\/www.drupal.org\/project\/sector_Index\">Sector Quiz project on Drupal.org<\/a> or by using composer.<\/p>\n\n<p>In Sector Quiz, content comes first. Each quiz can be built from a set of scenarios, with quiz queues allowing you\u00a0to easily add and reshuffle scenarios in\u00a0a quiz. Each scenario takes advantage of the full suite of Sector content tools - such as\u00a0formatted text and media,\u00a0including banner videos or images.<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "field_scenario_question": [
+        {
+            "value": "Each scenario has a multiple-choice option set ... so, what is Sector Quiz? ",
+            "format": "teaser_display_text",
+            "processed": "Each scenario has a multiple-choice option set ... so, what is Sector Quiz?"
+        }
+    ]
+}

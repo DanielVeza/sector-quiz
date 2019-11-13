@@ -1,0 +1,92 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/scenario_answer"
+        }
+    },
+    "id": [
+        {
+        }
+    ],
+    "uuid": [
+        {
+            "value": "cde6fc59-eb63-43a0-9be1-3f11a60ccc3f"
+        }
+    ],
+    "revision_id": [
+        {
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "scenario_answer"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-11-05T21:25:19+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "28"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_scenario_answers"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_scenario_answer": [
+        {
+            "value": "Sector is an open source CMS Drupal distribution - made here in New Zealand and supported locally by Sparks Interactive. ",
+            "format": "teaser_display_text",
+            "processed": "Sector is an open source CMS Drupal distribution - made here in New Zealand and supported locally by Sparks Interactive."
+        }
+    ],
+    "field_scenario_answer_correct": [
+        {
+            "value": true
+        }
+    ],
+    "field_scenario_answer_feedback": [
+        {
+            "value": "This is the right answer - we are not here to conquer the world, we are here to help local businesses and public entities deliver their websites and online services. Fast and efficient, just like New Zealanders.",
+            "format": "teaser_display_text",
+            "processed": "This is the right answer - we are not here to conquer the world, we are here to help local businesses and public entities deliver their websites and online services. Fast and efficient, just like New Zealanders."
+        }
+    ]
+}

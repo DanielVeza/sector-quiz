@@ -1,0 +1,111 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/entity_subqueue\/quizzes"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/entity_subqueue\/quizzes\/items": [
+            {
+                "href": "http:\/\/default\/quizzes\/what-sector-sample-scenario?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/quizzes\/why-sector-sample-scenario?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/entity_subqueue\/quizzes\/uid": [
+            {
+                "href": "http:\/\/default\/user\/3?_format=hal_json"
+            }
+        ]
+    },
+    "name": [
+        {
+            "value": "sector_quiz_sample_quiz"
+        }
+    ],
+    "uuid": [
+        {
+            "value": "20e4e778-ba5d-42e9-a042-32600fba1b9b"
+        }
+    ],
+    "queue": [
+        {
+            "target_id": "quizzes"
+        }
+    ],
+    "title": [
+        {
+            "value": "Sector Quiz (Sample Quiz)"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/entity_subqueue\/quizzes\/items": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/quizzes\/what-sector-sample-scenario?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/quiz_scenario"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "80076676-cffe-4831-aad1-df06cb7a5fef"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/quizzes\/why-sector-sample-scenario?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/quiz_scenario"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "f5556f4b-3d42-48a0-889e-29fa5c8dea79"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/entity_subqueue\/quizzes\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6548935b-b1d4-46aa-b0ee-abdb66acb8da"
+                    }
+                ]
+            }
+        ]
+    },
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-11-05T03:01:20+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-11-05T23:46:13+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

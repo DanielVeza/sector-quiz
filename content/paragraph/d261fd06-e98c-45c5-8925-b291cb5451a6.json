@@ -1,0 +1,92 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/scenario_answer"
+        }
+    },
+    "id": [
+        {
+        }
+    ],
+    "uuid": [
+        {
+            "value": "d261fd06-e98c-45c5-8925-b291cb5451a6"
+        }
+    ],
+    "revision_id": [
+        {
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "scenario_answer"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-11-05T21:29:55+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "28"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_scenario_answers"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_scenario_answer": [
+        {
+            "value": "Sector is just Drupal. ",
+            "format": "teaser_display_text",
+            "processed": "Sector is just Drupal."
+        }
+    ],
+    "field_scenario_answer_correct": [
+        {
+            "value": false
+        }
+    ],
+    "field_scenario_answer_feedback": [
+        {
+            "value": "This is a wrong answer - Sector is Drupal, but it is also so much more. We\u2019ve used the best Drupal tools on the market and preconfigured authoring tools, content types, and file management across a wide range of use cases - launching your Drupal site has never been so fast, efficient, and easy.",
+            "format": "teaser_display_text",
+            "processed": "This is a wrong answer - Sector is Drupal, but it is also so much more. We\u2019ve used the best Drupal tools on the market and preconfigured authoring tools, content types, and file management across a wide range of use cases - launching your Drupal site has never been so fast, efficient, and easy."
+        }
+    ]
+}

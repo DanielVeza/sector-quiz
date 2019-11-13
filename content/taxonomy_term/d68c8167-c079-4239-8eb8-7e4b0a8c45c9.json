@@ -1,0 +1,149 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/quizzes\/sector-quiz-quiz-sample-quiz?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/quiz"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/quiz\/parent": [
+            null
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/quiz\/field_quiz_entity_subqueue": [
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/quiz\/field_quiz_thank_you_page": [
+            {
+                "href": "http:\/\/default\/node\/26?_format=hal_json"
+            }
+        ]
+    },
+    "tid": [
+        {
+        }
+    ],
+    "uuid": [
+        {
+            "value": "d68c8167-c079-4239-8eb8-7e4b0a8c45c9"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "quiz"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "name": [
+        {
+            "value": "Sector Quiz Quiz (sample quiz)",
+            "lang": "en"
+        }
+    ],
+    "description": [
+        {
+            "value": "<p>That&nbsp;is not a typo - this is&nbsp;a sample quiz for the Sector Quiz add-on.&nbsp;<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>That\u00a0is not a typo - this is\u00a0a sample quiz for the Sector Quiz add-on.\u00a0<\/p>",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 0
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/quiz\/parent": [
+            null
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/quiz\/field_quiz_entity_subqueue": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/entity_subqueue\/quizzes"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b6656a6c-3d7c-49b4-a628-4d7521e620ef"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/quiz\/field_quiz_thank_you_page": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/node\/26?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "8bba9f17-c8e2-4c4f-96e4-42c80cf0921a"
+                    }
+                ]
+            }
+        ]
+    },
+    "changed": [
+        {
+            "value": "2019-11-11T20:48:56+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| Sector",
+                "robots": "noindex",
+                "shortlink": "http:\/\/default\/node\/10",
+                "canonical_url": "http:\/\/default\/node\/10",
+                "og_url": "http:\/\/default\/node\/10"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/quizzes\/sector-quiz-quiz-sample-quiz",
+            "pid": 36,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ]
+}

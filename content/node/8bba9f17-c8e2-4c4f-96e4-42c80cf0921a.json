@@ -1,0 +1,203 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/thank-you-sector-quiz?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/6?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "nid": [
+        {
+        }
+    ],
+    "uuid": [
+        {
+            "value": "8bba9f17-c8e2-4c4f-96e4-42c80cf0921a"
+        }
+    ],
+    "vid": [
+        {
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "page"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2019-11-05T02:52:12+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e01686fe-c07c-444c-b1d8-196f177e64f3"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e01686fe-c07c-444c-b1d8-196f177e64f3"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/6?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/page_variants"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fd9a1a20-c2a0-454b-8b57-b2981e3affc2"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Thank you for taking our quiz (Quiz sample content)",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-11-05T02:33:31+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-11-05T02:52:12+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Thank you for taking our quiz (Quiz sample content) | Sector",
+                "shortlink": "http:\/\/default\/node\/10",
+                "canonical_url": "http:\/\/default\/node\/10",
+                "description": "The quiz thank-you page is the endpoint of a quiz - thank the user for taking the quiz and tell them what what happens next.\u00a0The thank-you page is a Sector Standard page and can be edited like any Sector content - easy-as.\u00a0",
+                "og_url": "http:\/\/default\/node\/10",
+                "og_title": "Thank you for taking our quiz (Quiz sample content)",
+                "og_description": "The quiz thank-you page is the endpoint of a quiz - thank the user for taking the quiz and tell them what what happens next.\u00a0The thank-you page is a Sector Standard page and can be edited like any Sector content - easy-as.\u00a0",
+                "og_image_type": "image\/jpeg"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/thank-you-sector-quiz",
+            "pid": 33,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ],
+    "body": [
+        {
+            "value": "<p class=\"lead\">The quiz thank-you page is the endpoint of a quiz - thank the user for taking the quiz and tell them what what happens next.&nbsp;The thank-you page is a Sector Standard page and can be edited like any Sector content - easy-as.&nbsp;<\/p>\r\n\r\n<p>You can have one thank-you page per quiz, or use the same thank-you page for all quizzes - whatever works best for you. Using the&nbsp;Page content settings you might consider hiding this page from the site-wide search results.<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\r\n<p>This sample page is part of the Sector Quiz Add-on. It is a node for the content type Page using the Standard&nbsp;page Page variant.&nbsp;Learn more about Sector and the <a href=\"https:\/\/www.sector.nz\/documentation\/coming-soon\">Sector Quiz Add-on<\/a> at <a href=\"https:\/\/www.sector.nz\/\">Sector.nz<\/a>.&nbsp;<\/p>\r\n<\/div>\r\n",
+            "format": "basic_html",
+            "processed": "<p class=\"lead\">The quiz thank-you page is the endpoint of a quiz - thank the user for taking the quiz and tell them what what happens next.\u00a0The thank-you page is a Sector Standard page and can be edited like any Sector content - easy-as.\u00a0<\/p>\n\n<p>You can have one thank-you page per quiz, or use the same thank-you page for all quizzes - whatever works best for you. Using the\u00a0Page content settings you might consider hiding this page from the site-wide search results.<\/p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>This sample page is part of the Sector Quiz Add-on. It is a node for the content type Page using the Standard\u00a0page Page variant.\u00a0Learn more about Sector and the <a href=\"https:\/\/www.sector.nz\/documentation\/coming-soon\">Sector Quiz Add-on<\/a> at <a href=\"https:\/\/www.sector.nz\/\">Sector.nz<\/a>.\u00a0<\/p>\n<\/div>",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "field_last_updated": [
+        {
+            "value": "2019-11-05",
+            "lang": "en"
+        }
+    ]
+}

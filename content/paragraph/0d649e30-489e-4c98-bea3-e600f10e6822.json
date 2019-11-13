@@ -1,0 +1,92 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/scenario_answer"
+        }
+    },
+    "id": [
+        {
+        }
+    ],
+    "uuid": [
+        {
+            "value": "0d649e30-489e-4c98-bea3-e600f10e6822"
+        }
+    ],
+    "revision_id": [
+        {
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "scenario_answer"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-11-05T22:17:45+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "29"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_scenario_answers"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_scenario_answer": [
+        {
+            "value": "Sector Quiz is an optional Sector add-on. ",
+            "format": "teaser_display_text",
+            "processed": "Sector Quiz is an optional Sector add-on."
+        }
+    ],
+    "field_scenario_answer_correct": [
+        {
+            "value": true
+        }
+    ],
+    "field_scenario_answer_feedback": [
+        {
+            "value": "This is the right answer - Sector Quiz is a part of the growing Sector Ecosystem. ",
+            "format": "teaser_display_text",
+            "processed": "This is the right answer - Sector Quiz is a part of the growing Sector Ecosystem."
+        }
+    ]
+}

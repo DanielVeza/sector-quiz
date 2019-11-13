@@ -1,6 +1,26 @@
 <?php
 
+use Drupal\node\Entity\Node;
 use Drupal\views\ViewExecutable;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\paragraphs\Entity\Paragraph;
+
+/**
+ * Implements hook_help().
+ */
+function sector_quiz_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the sector_contact module.
+    case 'help.page.sector_quiz':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Sector content add on') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
 
 function sector_quiz_views_pre_render(ViewExecutable $view) {
   $validResults = [];
@@ -59,4 +79,78 @@ function sector_quiz_theme() {
     ],
   ];
 }
+
+/**
+ * Implements hook_modules_installed().
+ *
+ * Adds the sample paragraphs to their correct sample node.
+ *
+ * Has to be done here instead of hook_install because the
+ * sample content has not been created by the time
+ * hook_install runs.
+ *
+ * @param $modules
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function sector_quiz_modules_installed($modules) {
+  // We only want to run this on install of this module.
+  if (in_array('sector_quiz', $modules)) {
+    $entityRepository = \Drupal::service('entity.repository');
+    $paragraphNodeMappings = [
+      '084a32cb-e867-4cce-9aeb-20ceb3e1c590' => 'f5556f4b-3d42-48a0-889e-29fa5c8dea79',
+      '0d649e30-489e-4c98-bea3-e600f10e6822' => '80076676-cffe-4831-aad1-df06cb7a5fef',
+      '22bdfa5d-6517-418f-ae9e-4b7078ab4e35' => '80076676-cffe-4831-aad1-df06cb7a5fef',
+      '5f624678-514a-4261-88d5-7861e35588a6' => 'f5556f4b-3d42-48a0-889e-29fa5c8dea79',
+      '6842a0cf-8c75-4201-b769-fe46c2a9b4ad' => '80076676-cffe-4831-aad1-df06cb7a5fef',
+      'c9133b29-b379-4cda-a9d8-99091ec20ee3' => 'f5556f4b-3d42-48a0-889e-29fa5c8dea79',
+      'cde6fc59-eb63-43a0-9be1-3f11a60ccc3f' => '0a3e20f1-1cdf-469a-b249-d316e58b5866',
+      'd261fd06-e98c-45c5-8925-b291cb5451a6' => '0a3e20f1-1cdf-469a-b249-d316e58b5866',
+    ];
+    $paragraphs = [];
+    foreach ($paragraphNodeMappings as $paragraphUuid => $parentNodeUuid) {
+      /* @var Node $parentEntity  */
+      $parentEntity = $entityRepository->loadEntityByUuid('node', $parentNodeUuid);
+      $paragraph = $entityRepository->loadEntityByUuid('paragraph', $paragraphUuid);
+      $paragraph->setParentEntity($parentEntity, 'field_scenario_answers');
+      $paragraphs[] = $paragraph;
+      $paragraph->save();
+      // Attach the paragraph to their node.
+      $parentEntity->get('field_scenario_answers')->appendItem([
+        'target_id' => $paragraph->id(),
+        'target_revision_id' => $paragraph->getRevisionId(),
+      ]);
+      $parentEntity->save();
+    }
+
+    $queueNodeMappings = [
+      '20e4e778-ba5d-42e9-a042-32600fba1b9b' => ['80076676-cffe-4831-aad1-df06cb7a5fef', 'f5556f4b-3d42-48a0-889e-29fa5c8dea79'],
+      'b6656a6c-3d7c-49b4-a628-4d7521e620ef' => ['0a3e20f1-1cdf-469a-b249-d316e58b5866'],
+    ];
+
+    foreach ($queueNodeMappings as $queueUuid => $nodeUuids) {
+      $queue = $entityRepository->loadEntityByUuid('entity_subqueue', $queueUuid);
+      $items = [];
+      foreach ($nodeUuids as $nodeUuid) {
+        /* @var Node $node  */
+        $node = $entityRepository->loadEntityByUuid('node', $nodeUuid);
+        $items[] = $node;
+      }
+      $queue->set('items', $items);
+      $queue->save();
+    }
+
+    $termQueueMappings = [
+      "7557370d-d32f-4cbd-b209-aea497db8589" => "20e4e778-ba5d-42e9-a042-32600fba1b9b",
+      "d68c8167-c079-4239-8eb8-7e4b0a8c45c9" => "b6656a6c-3d7c-49b4-a628-4d7521e620ef",
+    ];
+
+    foreach ($termQueueMappings as $termUuid => $queueUuid) {
+      $term = $entityRepository->loadEntityByUuid('taxonomy_term', $termUuid);
+      $queue = $entityRepository->loadEntityByUuid('entity_subqueue', $queueUuid);
+      $term->set('field_quiz_entity_subqueue', ['target_id' => $queue->id()]);
+      $term->save();
+    }
+  }
+}
+
 

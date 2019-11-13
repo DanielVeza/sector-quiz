@@ -9,6 +9,8 @@ dependencies:
     - taxonomy
     - user
     - view_unpublished
+_core:
+  default_config_hash: 1iURYfZ3mXi_LS7U6rGswUR44Ggka9oer2V8INVspEs
 id: sector_quiz
 label: 'Sector quiz'
 module: views
@@ -248,8 +250,8 @@ display:
           empty: true
           tokenize: false
           content:
-            value: "<div class=\"prose\"><p class=\"lead\">This is a 'View page'. All elements of this page are managed via the view.</p>\r\n<p> For example this text is added via the global view element 'Text area'.</p></div>"
-            format: full_html
+            value: "<div class=\"prose\"><p class=\"lead\">This is the quiz landing page - it is a 'view page' and all elements on it are managed via the view.</p>\r\n<p>Instead of focusing on linear, test-style quizzes, Sector Quiz takes a self-learning approach. Sector Quiz allows the user taking the quiz to browse through quiz scenarios on a self-guided tour, or follow a suggested path through a series of scenarios bundled into one quiz.</p>\r\n<p>Visit <a href=\"https://www.sector.nz/\">Sector.nz</a> to learn more about Sector and the <a href=\"https://www.sector.nz/documentation/coming-soon\">Sector Quiz add-on</a></p>\r\n</div>"
+            format: basic_html
           plugin_id: text
       footer: {  }
       empty: {  }
@@ -370,7 +372,21 @@ display:
         row: false
         header: false
         arguments: false
-      sorts: {  }
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
       relationships: {  }
       group_by: false
       style:
@@ -583,6 +599,7 @@ display:
         row: false
         filters: false
         filter_groups: false
+        sorts: false
       style:
         type: html_list
         options:
@@ -661,6 +678,34 @@ display:
         operator: AND
         groups:
           1: AND
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: node_field_data
+          field: entityqueue_relationship
+          relationship: reverse__node__field_scenario_quiz
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: node
+          plugin_id: entity_queue_position
     cache_metadata:
       max-age: -1
       contexts:
