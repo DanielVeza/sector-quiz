@@ -23,5 +23,5 @@ Run composer update to get the module and it's dependencies
 
 `composer update drupal/sector_quiz`
 
-Copy the tempalte file `ds-1col--paragraph_scenario_answer-default.html.twig` from this module to your custom themes 
-`templates/parapgraphs/` directory
+Copy the template file `ds-1col--paragraph_scenario_answer-default.html.twig` from this module to your custom themes 
+`templates/paragraphs/` directory
