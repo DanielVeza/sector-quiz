@@ -20,7 +20,7 @@
         }
     },
     "require": {
-        "drupal/paragraphs": "1.9",
+        "drupal/paragraphs": "^1.0",
         "drupal/tvi": "^1.0@beta"
     },
     "extra": {
