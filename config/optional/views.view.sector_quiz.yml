@@ -9,8 +9,6 @@ dependencies:
     - taxonomy
     - user
     - view_unpublished
-_core:
-  default_config_hash: 1iURYfZ3mXi_LS7U6rGswUR44Ggka9oer2V8INVspEs
 id: sector_quiz
 label: 'Sector quiz'
 module: views
@@ -18,7 +16,6 @@ description: 'Quiz view supporting the Sector Quiz content type provided by the 
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -214,6 +211,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         vid:
           id: vid
@@ -224,6 +223,9 @@ display:
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
       sorts:
         entityqueue_relationship:
           id: entityqueue_relationship
@@ -393,11 +395,11 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: ''
+          row_class: mt-2
           default_row_class: false
           type: ul
           wrapper_class: ''
-          class: list-unstyled
+          class: 'list-unstyled smooth-text'
       row:
         type: fields
         options: {  }
@@ -569,8 +571,8 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: '0'
-          element_wrapper_class: ''
+          element_wrapper_type: div
+          element_wrapper_class: 'border p-2 font-weight-bold smooth-text'
           element_default_classes: false
           empty: ''
           hide_empty: false
@@ -600,6 +602,7 @@ display:
         filters: false
         filter_groups: false
         sorts: false
+        header: false
       style:
         type: html_list
         options:
@@ -608,11 +611,11 @@ display:
               field: name
               rendered: true
               rendered_strip: false
-          row_class: responsive-layout__item
+          row_class: 'mr-3 mt-4'
           default_row_class: false
           type: ul
-          wrapper_class: list__group
-          class: 'list-unstyled list--fridge-magnets responsive-layout responsive-layout responsive-layout--t2 responsive-layout--d3'
+          wrapper_class: mt-2
+          class: 'list-unstyled d-flex flex-wrap mb-4 mt-n4'
       row:
         type: fields
         options: {  }
@@ -627,6 +630,8 @@ display:
           id: status
           expose:
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
           group: 1
         vid:
           id: vid
@@ -637,6 +642,9 @@ display:
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
         status_extra:
           id: status_extra
           table: node_field_data
@@ -660,6 +668,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -706,6 +716,20 @@ display:
             label: ''
           entity_type: node
           plugin_id: entity_queue_position
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<div class=\"prose mb-4\"><p class=\"lead\">This is the quiz landing page - it is a 'view page' and all elements on it are managed via the view.</p>\r\n<p>Instead of focusing on linear, test-style quizzes, Sector Quiz takes a self-learning approach. Sector Quiz allows the user taking the quiz to browse through quiz scenarios on a self-guided tour, or follow a suggested path through a series of scenarios bundled into one quiz.</p>\r\n<p>Visit <a href=\"https://www.sector.nz/\">Sector.nz</a> to learn more about Sector and the <a href=\"https://www.sector.nz/documentation/coming-soon\">Sector Quiz add-on</a></p>\r\n</div>"
+            format: basic_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

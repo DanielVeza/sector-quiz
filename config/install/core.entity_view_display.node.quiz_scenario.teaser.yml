@@ -43,3 +43,4 @@ hidden:
   field_scenario_quiz: true
   field_scenario_transcript: true
   field_teaser: true
+  search_api_excerpt: true

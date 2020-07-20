@@ -5,6 +5,13 @@ use Drupal\views\ViewExecutable;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 
+
+function sector_quiz_preprocess_html(&$variables) {
+  $theme = \Drupal::service('theme.manager')->getActiveTheme()->getName();
+  $variables['#attached']['library'][] = $theme . '/sector-quiz';
+}
+
+
 /**
  * Implements hook_help().
  */

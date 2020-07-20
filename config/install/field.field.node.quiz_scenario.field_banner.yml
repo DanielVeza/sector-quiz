@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_banner
     - media.type.image
-    - media.type.video
+    - media.type.remote_video
     - node.type.quiz_scenario
 id: node.quiz_scenario.field_banner
 field_name: field_banner
@@ -21,7 +21,7 @@ settings:
   handler_settings:
     target_bundles:
       image: image
-      video: video
+      remote_video: remote_video
     sort:
       field: _none
     auto_create: false

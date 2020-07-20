@@ -147,3 +147,4 @@ hidden:
   field_scenario_quiz: true
   field_scenario_transcript: true
   links: true
+  search_api_excerpt: true

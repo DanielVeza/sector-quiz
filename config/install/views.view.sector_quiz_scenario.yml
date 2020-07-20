@@ -21,7 +21,6 @@ description: ''
 tag: ''
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -63,11 +62,11 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: responsive-layout__item
+          row_class: 'col-xs-12 col-md-6 mt-4'
           default_row_class: false
           type: ul
-          wrapper_class: ''
-          class: 'list-unstyled responsive-layout responsive-layout--t2'
+          wrapper_class: mt-4
+          class: 'list-unstyled d-flex row flex-wrap mb-0 mt-n4'
       row:
         type: fields
       fields:
@@ -158,6 +157,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -182,6 +183,9 @@ display:
           entity_field: type
           plugin_id: bundle
           group: 1
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
       sorts:
         entityqueue_relationship:
           id: entityqueue_relationship
@@ -380,12 +384,12 @@ display:
             preserve_tags: ''
             html: false
           element_type: h3
-          element_class: 'slat__title has-no-margin'
+          element_class: 'slat__title h4 mb-0 mt-3 d-block font-weight-bold'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: div
-          element_wrapper_class: has-margin-top-base-alternate
+          element_wrapper_type: '0'
+          element_wrapper_class: ''
           element_default_classes: false
           empty: ''
           hide_empty: false
@@ -443,7 +447,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: 'slat__body has-margin-top-half'
+          element_class: 'slat__body mt-2 smooth-text'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false

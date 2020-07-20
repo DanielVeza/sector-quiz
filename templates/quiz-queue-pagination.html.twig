@@ -1,12 +1,10 @@
 {% for key,value in queues %}
-  <div class="meta--more prose has-border-top-alternate has-margin-top-double">
-    <div class="has-padding-top-base">
+  <div class="meta--more prose border-top pt-2 mt-4">
       {% set message = (key > 0) ? "This scenario is also part of the quiz:" : "This scenario is part of the quiz:" %}
-      {% set next_page_message = (value.next_item_url is not empty) ? '<a class="action action--pager-next" href="'~value.next_item_url~'"><span>Next</span> <span class="small">'~value.next_item_name~'</span></a>' %}
-      {% set prev_page_message = (value.prev_item_url is not empty) ? '<a class="action action--pager-previous" href="'~value.prev_item_url~'"><span>Previous</span> <span class="small">'~value.prev_item_name~'</span></a>' %}
+      {% set next_page_message = (value.next_item_url is not empty) ? '<a class="action action--pager-next text-decoration-none" href="'~value.next_item_url~'"><span>Next</span> <span class="small">'~value.next_item_name~'</span></a>' %}
+      {% set prev_page_message = (value.prev_item_url is not empty) ? '<a class="action action--pager-previous text-decoration-none" href="'~value.prev_item_url~'"><span>Previous</span> <span class="small">'~value.prev_item_name~'</span></a>' %}
       <p>{{ message }} <a href="{{ value.quiz_url }}">{{ value.quiz_name }}</a>.</p>
       {{ prev_page_message|raw }}
       {{ next_page_message|raw }}
-    </div>
   </div>
 {% endfor %}

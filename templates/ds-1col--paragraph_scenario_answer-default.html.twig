@@ -62,6 +62,7 @@
     {%
       set answerAttrClasses = [
       "quiz__answer",
+      "mt-2",
       (correctAnswer) ? "is-correct" : "",
     ]
     %}
@@ -105,7 +106,7 @@
     <div {{ answerAttr.addClass(answerClasses) }}>{{ content.field_scenario_answer }}</div>
     <div {{ feedbackAttr.addClass(feedbackClasses) }}>
       {{ content.field_scenario_answer_feedback }}
-      <button class="btn btn-primary has-back-arrow js-quiz-back-button">Try a different response</button>
+      <button type="button" class="btn btn-dark js-quiz-back-button">Try a different response</button>
     </div>
     </div>
   {% endif %}

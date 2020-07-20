@@ -4,12 +4,16 @@ dependencies:
   config:
     - views.view.sector_quiz
   module:
+    - block_class
     - system
     - views
   theme:
-    - sector_starter
+    - sector_radix_starter
+third_party_settings:
+  block_class:
+    classes: 'mt-6 border-top pt-3'
 id: views_block__sector_quiz_block_1
-theme: sector_starter
+theme: sector_radix_starter
 region: sidebar
 weight: -15
 provider: null

@@ -4,5 +4,6 @@ dependencies: {  }
 id: scenario_answer
 label: 'Multiple choice answer'
 icon_uuid: null
+icon_default: null
 description: ''
 behavior_plugins: {  }

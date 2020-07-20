@@ -6,12 +6,12 @@ dependencies:
     - node
     - sector_quiz
   theme:
-    - sector_starter
+    - sector_radix_starter
 third_party_settings:
   block_class:
-    classes: has-margin-top-double
+    classes: mt-6
 id: quizqueuepaginationblock
-theme: sector_starter
+theme: sector_radix_starter
 region: content
 weight: -7
 provider: null

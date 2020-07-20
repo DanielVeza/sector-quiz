@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.short_teaser
+    - field.field.taxonomy_term.quiz.field_quiz_entity_subqueue
     - field.field.taxonomy_term.quiz.field_quiz_thank_you_page
     - taxonomy.vocabulary.quiz
   module:
@@ -17,6 +18,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -24,7 +26,8 @@ third_party_settings:
         link_attribute: ''
         link_custom: ''
         classes:
-          layout_class: {  }
+          layout_class:
+            mb-4: mb-4
           ds_content: {  }
     regions:
       ds_content:
@@ -52,4 +55,6 @@ content:
               - prose
             lb-col: false
 hidden:
+  field_quiz_entity_subqueue: true
   field_quiz_thank_you_page: true
+  search_api_excerpt: true

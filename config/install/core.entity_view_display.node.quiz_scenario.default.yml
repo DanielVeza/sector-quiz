@@ -29,6 +29,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -59,10 +60,10 @@ third_party_settings:
       format_settings:
         description: ''
         id: ''
-        classes: 'transcript has-margin-top-double'
+        classes: 'transcript mt-4 mb-0'
         open: false
       label: Transcript
-      region: hidden
+      region: ds_content
     group_meta:
       children:
         - field_scenario_category
@@ -78,9 +79,9 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: 'meta call-to-action-left-line'
+        classes: 'mb-4 smooth-text d-flex flex-wrap border-bottom pb-2'
       label: Meta
-      region: hidden
+      region: ds_content
     group_quiz:
       children:
         - field_scenario_question
@@ -97,9 +98,9 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: 'quiz js-quiz-answers has-margin-top-double'
+        classes: 'quiz js-quiz-answers mt-4'
       label: Quiz
-      region: hidden
+      region: ds_content
 id: node.quiz_scenario.default
 targetEntityType: node
 bundle: quiz_scenario
@@ -151,13 +152,13 @@ content:
             lbw-at: ''
             ow: true
             ow-el: ul
-            ow-cl: 'list-unstyled list--log-pile has-margin-top-base'
+            ow-cl: 'list-unstyled list--log-pile mt-3'
             ow-at: ''
             fis-el: ''
             fis-cl: ''
             fis-at: ''
-            fi-el: ''
-            fi-cl: ''
+            fi-el: li
+            fi-cl: mt-2
             fi-at: ''
             suffix: ''
             lbw: false
@@ -208,7 +209,7 @@ content:
             fis-at: ''
             fi: true
             fi-el: h2
-            fi-cl: ''
+            fi-cl: 'h3 font-weight-bold smooth-text my-0'
             fi-at: ''
             suffix: ''
             lbw: false
@@ -243,3 +244,4 @@ hidden:
   field_scenario_quiz: true
   field_teaser: true
   links: true
+  search_api_excerpt: true
