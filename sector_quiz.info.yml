@@ -1,7 +1,7 @@
 name: Sector Quiz
 type: module
 description: Provides quiz management functionality for Sector Distribution.
-core: 8.x
+core_version_requirement: '^8 || ^9'
 package: Sector
 
 dependencies:
